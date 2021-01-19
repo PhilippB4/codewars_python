@@ -1,0 +1,10 @@
+def abbrev_name(name):
+    // Den String in Vor- und Nachname aufteilen
+    names = name.split(' ')
+    
+    // Den ersten Buchstaben der Vornamen und den ersten Buchstaben des Nachnamen nehmen und großschreiben
+    // Die beiden Buchstaben mit dem Punkt zusammenfügen
+    name = names[0][0].upper() + '.' + names[1][0].upper()
+    
+    // Den neuen String zurückgeben
+    return name
