@@ -1,0 +1,4 @@
+def odds(values):
+    # Wir schreiben alle Werte aus values die ungerade sind (Modulo Operator gibt mehr als rest 0 zurück) 
+    # in eine neue Liste und geben diese zurück
+    return [x for x in values if x % 2 != 0]
