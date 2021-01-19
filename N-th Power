@@ -1,2 +1,4 @@
 def index(array, n):
+    # Die Zahl aus der Liste "array" an dem Index n wird mit n potenziert
+    # Wenn n größer oder gleich der Länge der Liste ist (Index zu hoch) dann gib -1 zurück
     return array[n] ** n if n < len(array) else -1
