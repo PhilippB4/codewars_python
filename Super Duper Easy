@@ -1,0 +1,3 @@
+def problem(a):
+    // Wir geben "Error" zurück, wenn a ein string ist, ansonsten geben wir a * 50 + 6 zurück
+    return "Error" if type(a) == str else a * 50 + 6
