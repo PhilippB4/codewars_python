@@ -1,3 +1,6 @@
 def add_five(num):
+    # Zu der Zahl num 5 hinzuaddieren und zurückgeben
     total = num + 5
+    
+    # Als return Wert muss das Ergebnis aus num + 5 genommen werden
     return total
