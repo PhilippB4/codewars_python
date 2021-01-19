@@ -1,0 +1,11 @@
+def quarter_of(month):
+    # Wir prüfen ob die Monate zwischen 1-3 (kleiner 4), 4-6 (kleiner 7), 7-9 (kleiner 10) sind
+    # Alles ab 10 ist in else mit inbegriffen
+    if month < 4:
+        return 1
+    elif month < 7:
+        return 2
+    elif month < 10:
+        return 3
+    else:
+        return 4
