@@ -1,6 +1,13 @@
 def get_count(input_str):
+  # Variable in der die Anzahl der Vokale gespeichert werden soll
   num_vowels = 0
+  
+  # for-schleife mit der durch den String iteriert wird
   for x in input_str:
+  
+    # Wenn x ein Vokal ist, dann zähle 1 zu der Variable num_vowels hinzu
     if x in "aeiouAEIOU"
       num_vowels = num_vowels+1
+  
+  # Gibt die Anzahl der Vokale zurück
   return num_vowels
