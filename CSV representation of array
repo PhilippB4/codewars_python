@@ -1,8 +1,21 @@
+# Eine csv Datei ist eine Datei bestehend aus Daten, die durch Kommas getrennt werden
+
 def toCsvText(array):
+    # Leeren Sting erstellen um darin die csv Schreibweise zu speichern
     csvStr = ''
+    
+    # Durch die Liste "array" iterieren
     for arr in array:
+        
+        # Durch jede Liste "arr" iterieren, bis 1 vor dem letzten Element
         for x in range(len(arr)-1):
+        
+            # Jedes Element dem Sting hinzufügen jeweils mit Kommma getrennt
             csvStr += str(arr[x]) + ','
+        
+        # Dem String das letzte Element der jeweiligen Liste "arr" hinzufügen + einen Zeilenumbruch "\n"
         csvStr += str(arr[-1])
         csvStr += '\n'
+    
+    # Den csv-String zurückgeben außer den letzten Zeilenumbruch
     return csvStr[:-1]
