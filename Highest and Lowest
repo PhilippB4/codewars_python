@@ -1,0 +1,6 @@
+def high_and_low(numbers):
+    # Zuerst werden die Zahlen aus dem String als Integer in eine Liste geschrieben
+    nums = [int(x) for x in numbers.split(' ')]
+    
+    # Wir holen jeweils das Maximum und das Minimum aus der Liste und geben diese als String wieder zurück
+    return str(max(nums)) + ' ' + str(min(nums))
