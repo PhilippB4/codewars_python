@@ -1,0 +1,10 @@
+def square_digits(num):
+    # Wir erstellen eine Variable um die Zahl abzuspeichern
+    sq = ''
+    
+    # Wir quadrieren jede Zahl aus der nummer (als String) und schreiben diese zu der Variable sq
+    for ziffer in str(num):
+        sq += str(int(ziffer) ** 2)
+        
+    # Wir geben die Variable sq als Integer zurück
+    return int(sq)
