@@ -1,0 +1,6 @@
+def solution(st, limit): 
+    # st[:limit] -> nimmt nur die Teile des Strings bis VOR dem angegebenen Limit
+    # für diesen Fall müssen dann auch am Ende die 3 Punkte hinzugefügt werden
+    # Ob dieser Fall eintrifft wird geprüft indem wir schauen ob die Länge des Strings größer als das Limit ist
+    # Ist das Limit größer als der String wird der gesamte String zurückgegeben
+    return st[:limit] + '...' if len(st) > limit else st
