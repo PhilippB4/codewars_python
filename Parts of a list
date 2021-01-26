@@ -1,0 +1,11 @@
+def partlist(arr):
+    # Wir erstellen eine Liste für unsere Lösung
+    sol = []
+    
+    # Wir iterieren durch die Liste arr, beginnend beim zweiten Element
+    for x in range(1, len(arr)):
+        # Wir fügen zu der Liste sol ein Tupel aus dem ersten Teil und dem zweiten Teil der Liste arr 
+        sol.append((' '.join(arr[:x]), ' '.join(arr[x:])))
+    
+    # Die Liste sol zurückgeben
+    return sol
