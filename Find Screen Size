@@ -1,0 +1,10 @@
+def find_screen_height(width, ratio): 
+    # Wir teilen den String ratio an dem :
+    ratios = ratio.split(':')
+    
+    # Wir teilen die Breite durch die den ersten Teil des Verhältnisses
+    # Danach multiplizieren wir das Ergebnis mit dem zweiten Teil um die Höhe zu erhalten
+    height = (width / int(ratios[0])) * int(ratios[1])
+    
+    # Wir fügen Breite und Höhe als String mit dem x zusammen
+    return str(width) + 'x' + str(int(height))
