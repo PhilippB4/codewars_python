@@ -1,0 +1,18 @@
+def accum(s):
+    # Wir erstellen einen leeren String
+    string = ''
+    
+    # Wir gehen durch jedes Element in dem Eingabestring s
+    for x in range(len(s)):
+        # Wir erstellen einen temporären String und geben diesem als 
+        # erstes Element den aktuellen Buchstaben als Großbuchstabe
+        tmp_str = s[x].upper()
+        # Wir fügen dem String den aktuellen Buchstaben als 
+        # Kleinbuchstabe so oft hinzu wie der Index des Elements ist
+        # Am Ende kommt noch ein Bindestrich als Trennzeichen
+        tmp_str += s[x].lower() * x + '-'
+        # Wir fügen dem String "string" den temporären String hinzu
+        string += tmp_str
+        
+    # Wir geben den String zurück, bis auf den letzten Bindestrich
+    return string[:-1]
