@@ -1,0 +1,8 @@
+def averages(arr):
+    # Rechts ist die wichtige if-Abfrage, wenn die Liste leer ist soll eine leere Liste zurück gegeben werden
+    # Wenn nicht dann (von links nach rechts):
+    # - das Listen Element an Stelle x wird mit dem folgenden Element aufsummiert
+    # - die Summe wird durch 2 geteilt
+    # - das wird für jedes Element in der Liste gemacht (bis 1 vor dem letzten)
+    # - das Ergebnis ist eine Liste aus den Durschnitten zwischen zwei aufeinanderfolgenen Zahlen
+    return [(arr[x] + arr[x+1]) / 2 for x in range(len(arr)-1)] if arr else []
