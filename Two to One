@@ -1,0 +1,17 @@
+def longest(a1, a2):
+    # Neue Liste erstellen in der das Ergebnis gespeichert wird
+    comb = []
+    
+    # Durch den ersten String iterieren und jeden Buchstabe nur einmal in comb speichern
+    for x in a1: 
+        if x not in comb:
+            comb.append(x)
+    
+    # Durch den zweiten String iterieren und die Buchstaben in comb speichern, 
+    # die bisher noch nicht darin vorhanden sind
+    for x in a2: 
+        if x not in comb:
+            comb.append(x)
+    
+    # Die Liste sortieren und als String zurückgeben
+    return ''.join(sorted(comb))
