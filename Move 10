@@ -1,0 +1,24 @@
+# Modul string importieren, in dem es das Alphabet gibt
+import string
+
+def move_ten(st):
+    # Neuen leeren String erstellen
+    new_str = ''
+    
+    # Durch jeden Buchstabe im Eingabestring iterieren
+    for char in st:
+    
+        # Den Index des Buchstaben im Alphabet holen
+        i = string.ascii_lowercase.index(char)
+        
+        # Wenn der Index größer als 25 ist, muss von vorne angefangen werden zu zählen
+        if i + 10 > 25:
+            i = i + 10 - 26 
+            # Den neuen Buchstaben dem neuen String hinzufügen
+            new_str += string.ascii_lowercase[i]
+        else:
+            # Den neuen Buchstaben dem neuen String hinzufügen
+            new_str += string.ascii_lowercase[i+10]
+            
+    # Den neuen String zurückgeben
+    return new_str
