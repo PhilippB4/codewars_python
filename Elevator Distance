@@ -1,0 +1,11 @@
+def elevator_distance(array):
+    # Variable dist erstellen, in der die Distanz gezählt wird
+    dist = 0
+    
+    # wir fangen beim zweiten Element an zu zählen
+    for x in range(1, len(array)):
+        # Die Distanz vom einen zum nächsten Stock ist der Betrag aus der Differenz
+        dist = dist + abs(array[x-1] - array[x])
+        
+    # Die Distanz ausgeben
+    return dist 
