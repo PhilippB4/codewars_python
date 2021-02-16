@@ -1,0 +1,5 @@
+def summy(string_of_ints):
+    # Den Eingabestring an den Leerzeichen trennen, daraus entsteht eine Liste. 
+    # Dann wird durch diese Liste iterieren und jedes Element in einen Integer umwandeln.
+    # Zum Schluss die Summe dieser Integer zurückgeben.
+    return sum(int(x) for x in string_of_ints.split(' '))
