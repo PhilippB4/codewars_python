@@ -1,0 +1,15 @@
+def vowel_2_index(string):
+    # Neuen String um darin das Ergebnis zu speichern
+    new_str = ''
+    
+    # Wir iterieren durch den Eingabestring
+    for x in range(len(string)):
+        # Wenn der Buchstabe ein Vokal ist, dann füg dem Ergebnisstring die Position im String hinzu
+        if string[x] in 'aeiouAEIOU':
+            new_str += str(x + 1)
+        # Wenn kein Vokal, füg den Buchstabe hinzu
+        else:
+            new_str += string[x]
+    
+    # Das Ergebnis zurückgeben
+    return new_str
