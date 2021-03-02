@@ -1,0 +1,14 @@
+def to_camel_case(text):
+    # Wir machen aus allen Strings Strings mit _, sodass wir das einheitlich haben
+    text = text.replace('-', '_')
+    # Der String wird am _ aufgeteilt
+    arr = text.split('_')
+    
+    # Das erste Element soll unverändert bleiben
+    first = arr.pop(0)
+    # Durch die restlichen Elemente iterieren wir und machen jeweils den ersten Buchstaben groß
+    for x in range(len(arr)):
+        arr[x] = arr[x].title()
+    
+    # Wir geben das erste Wort zusammen mit dem Rest wieder zurück
+    return first + ''.join(arr)
