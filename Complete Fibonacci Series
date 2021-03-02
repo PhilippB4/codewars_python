@@ -1,0 +1,19 @@
+def fibonacci(n): 
+    # Wenn n(Länge) < 1 dann gibt es keine Serie
+    if n < 1:
+        return []
+    # Wenn n = 1 dann ist das erste Element 0
+    elif n == 1:
+        return [0]
+    # Bei n > 1 soll eine Fibonacci Serie erstellt werden
+    else:
+        # Die Serie beginnt immer mit 0 und 1
+        seq = [0, 1]
+        # Wir machen die Serie solange wie n ist
+        while len(seq) != n:
+            # Es werden jeweils die letzten beiden Elemente aufaddiert und hinzugefügt
+            seq.append(seq[-2] + seq[-1])
+        # Die Serie wird ausgegeben
+        return seq
+    
+    
