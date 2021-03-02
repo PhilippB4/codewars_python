@@ -1,0 +1,10 @@
+def parts_sums(ls):
+    # Die erste Summe ist die Summe der gesamten Liste
+    sums = [sum(ls)]
+    # Wir gehen einmal durch die gesamte Liste 
+    for x in range(len(ls)):
+        # Wir ziehen jedes Element vom jeweils letzten Element 
+        # in der Summen Liste ab und fügen diese Summe wieder hinzu
+        sums.append(sums[x] - ls[x])
+    return sums
+    
