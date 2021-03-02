@@ -1,0 +1,34 @@
+def word_mesh(words):
+    mesh = ''
+    counter = 0
+    
+    # Wir iterieren durch jedes Wort der Eingabeliste, beginnend beim 2. Wort
+    for x in range(1, len(words)):
+        tmp_mesh = ''
+        
+        # Wir gehen durch jeden Buchstaben des vorherigen Wortes
+        for i in range(len(words[x-1])):
+            # Das vorherige Wort wird, von hinten beginnend, in Teilen gespeichert
+            tmp_bef = words[x-1][-i:]
+            # Das aktuelle Wort wird in Teilen, von vorne beginnend, gespeichert
+            tmp_now = words[x][:i]
+            
+            # Wenn die beiden Wortteile gleich sind, sollen dieser Teil gespeichert werden
+            if tmp_bef == tmp_now:
+                tmp_mesh = tmp_bef
+        
+        # Wenn das vorherige Wort gleich dem aktuellen Wort ist, kann das ganze Wort 
+        # unserem mesh hinzugefügt werden
+        if words[x-1] == words[x]:
+            mesh += words[x]
+            counter += 1
+        # Wenn die Länge des temporären mesh Größer 0 ist, dann speicher das in der Variable mesh 
+        elif len(tmp_mesh) > 0:
+            mesh += tmp_mesh
+            counter += 1
+    
+    # Wenn der Counter passt, gib das mesh zurück, ansonsten sag es hat nicht funktioniert
+    if counter == len(words)-1:
+        return mesh
+    else:
+        return "failed to mesh"
