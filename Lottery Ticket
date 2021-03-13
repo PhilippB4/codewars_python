@@ -1,0 +1,14 @@
+def bingo(ticket,win):
+    wins = 0
+    
+    # Durch die einzelnen subtickets iterieren
+    for arr in ticket:
+        # Durch jedes Element im subticket iterieren
+        for c in arr[0]:
+            # Wenn der Charcode dem Gewinnwert entspricht zähl eins auf den Gewinn counter
+            if ord(c) == arr[1]:
+                wins = wins + 1
+                break
+    
+    # Wenn man mindestens die erforderlichen Gewinne hat, hat gewonnen!
+    return 'Winner!' if wins >= win else 'Loser!'
