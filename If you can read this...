@@ -1,0 +1,19 @@
+def to_nato(words):
+    # Dictionary mit den Zuweisungen
+    codes = {'a': 'Alfa', 'b': 'Bravo', 'c': 'Charlie', 'd': 'Delta', 'e': 'Echo', 'f': 'Foxtrot', 'g': 'Golf', 'h': 'Hotel', 
+            'i': 'India', 'j': 'Juliett', 'k': 'Kilo', 'l': 'Lima', 'm': 'Mike', 'n': 'November', 'o': 'Oscar', 'p': 'Papa',
+            'q': 'Quebec', 'r': 'Romeo', 's': 'Sierra', 't': 'Tango', 'u': 'Uniform', 'v': 'Victor', 'w': 'Whiskey', 'x': 'Xray', 
+            'y': 'Yankee', 'z': 'Zulu'}
+    rtrn = []
+    # Durch den String iterieren
+    for char in words:
+        # Wenn der Charakter ein Buchstabe ist dann den Code raussuchen und in rtrn schreiben
+        if char.isalpha():
+            rtrn.append(codes[char.lower()])
+        # Wenn der Charakter ein Leerzeichen ist, dann nichts tun
+        elif char == ' ':
+            pass
+        # Jeder andere Charakter so wie er ist rtrn hinzufügen
+        else:
+            rtrn.append(char)
+    return ' '.join(rtrn)
