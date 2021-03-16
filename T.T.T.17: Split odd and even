@@ -1,0 +1,22 @@
+def split_odd_and_even(n):
+    # parts speichert die getrennten Teile
+    parts = []
+    # Zuerst wollen wir das erste Element
+    part = str(n)[0]
+    # Wir beginnen beim 2. Element
+    n = str(n)[1:]
+    
+    for x in n:
+        # Wir schauen was das erste Element im String und das letzte Element im aktuellen Part ist 
+        what = 'even' if int(x)%2==0 else 'odd'
+        what_last_in_part = 'even' if int(part[-1])%2==0 else 'odd'
+        # Wenn die beiden gleich sind, dann neue zum Part hinzupacken
+        if what == what_last_in_part:
+            part += x
+        # Wenn nicht part in parts speichern und neuen Part anfangen
+        else:
+            parts.append(int(part))
+            part = x
+    # Den letzten Part noch der Liste hinzufügen und returnen
+    parts.append(int(part))
+    return parts
