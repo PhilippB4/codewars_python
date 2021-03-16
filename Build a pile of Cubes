@@ -1,0 +1,15 @@
+def find_nb(m):
+    # summe soll die gesamte Größe der Würfel repräsentieren
+    summe = 0
+    # n als Counter für die Anzahl der Würfel
+    n = 0
+    # Solange die Summe kleiner ist als m, können wir weitere Würfel drauf packen
+    while summe < m:
+        n += 1
+        summe += n**3
+    # Wenn die Summe == m dann haben wir das Ziel erreicht und wir können die Würfelanzahl ausgeben
+    if summe == m:
+        return n 
+    # Wenn es nicht funktioniert -1 zurückgeben
+    else:
+        return -1
