@@ -1,0 +1,13 @@
+def make_a_window(num): 
+    # Die inneren Teile des Fensters werden zuerst zusammengebastelt
+    window_part = ''
+    for x in range(num):
+        dots = '.' * num
+        window_part += f'|{dots}|{dots}|\n'
+    # Die Bindestriche für den mittleren Trenner und diesen Zusammensetzen
+    dashes = '-' * num
+    middle = f'|{dashes}+{dashes}|\n'
+    # Die Bindestriche oben und unten 
+    dashes_outside = '-' * (num*2+3)
+    # Das Fenster zusammensetzen
+    return f'{dashes_outside}\n{window_part}{middle}{window_part}{dashes_outside}'
