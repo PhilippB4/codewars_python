@@ -1,0 +1,19 @@
+def encrypt_this(text):
+    rtrn = []
+    
+    # Durch jedes Wort im Text gehen
+    for word in text.split():
+        # Aus dem Wort eine Liste machen
+        word = list(word)
+        # Den ersten Buchstaben des Worts in seinen ASCII-Code-Wert umwandeln
+        word[0] = str(ord(word[0]))
+        
+        # Wenn das Wort länger als zwei Buchstaben ist, den zweiten und den letzten Buchstaben vertauschen
+        if len(word) > 2:
+            word[1], word[-1] = word[-1], word[1]
+        
+        # Das Wort wieder zusammenfügen
+        rtrn.append(''.join(word))
+    
+    # Den Text wieder zusammenfügen und zurückgeben
+    return ' '.join(rtrn)
