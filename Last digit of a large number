@@ -1,0 +1,4 @@
+def last_digit(n1, n2):
+    # Aufgrund der größe mancher Zahlen wird die eingebaute Funktion pow verwendet
+    # pow(Basiswert, Exponent, Modulowert(optional))
+    return pow(n1, n2, 10)
