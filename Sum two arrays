@@ -1,0 +1,26 @@
+def sum_arrays(array1,array2):
+    # Wenn die Listen beide leer sind, eine leere Liste zurückgeben
+    # Wenn nur eine Liste leer ist, eine [0] zurückgeben
+    if array1 == [] and array2 == []:
+        return []
+    elif array1 == []:
+        array1 = [0]
+    elif array2 == []:
+        array2 = [0]
+    
+    # Die Listen in Strings umwandeln
+    str1 = ''.join([str(x) for x in array1])
+    str2 = ''.join([str(x) for x in array2])
+    
+    # Die Strings aufaddieren
+    summed = str(int(str1) + int(str2))
+    new = []
+    
+    # Den Fall behandeln wenn die Summe negativ ist
+    if summed[0] == '-':
+        new = [int(summed[:2])]
+        summed = summed[2:]
+    rtrn = [int(x) for x in str(summed)]
+    
+    # Den negativen Anfang der Zahl vor die eigentliche Zahl setzen und zurückgeben
+    return new + rtrn
