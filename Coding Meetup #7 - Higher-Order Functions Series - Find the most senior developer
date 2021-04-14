@@ -1,0 +1,12 @@
+def find_senior(lst): 
+    # Variable für das größte Alter
+    oldest = 0
+    
+    # Durch jedes Element in der Liste durchgehen und schauen ob das Alter größer als das 
+    # bisher größte Alter ist, wenn ja dann die Variable oldest updaten
+    for dict in lst:
+        if dict['age'] > oldest:
+            oldest = dict['age']
+    
+    # Eine Liste mit den ältesten Personen zurückgeben
+    return [dict for dict in lst if dict['age'] == oldest]
