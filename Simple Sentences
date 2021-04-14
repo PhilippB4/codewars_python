@@ -1,0 +1,21 @@
+def make_sentences(parts):
+    # String für Rückgabewert
+    rtrn = ''
+    
+    # Jedes Element in parts prüfen
+    # Wenn Komma, dann unverändert lassen
+    # Wenn Punkt, nichts machen
+    # Alles andere, Leerzeichen + Element hinzufügen
+    for x in parts:
+        if x == ',':
+            rtrn += ','
+        elif x == '.':
+            pass
+        else:
+            rtrn += ' ' + x
+    
+    # Am Ende des Strings noch einen Punkt anfügen
+    rtrn += '.'
+    
+    # Den Return Wert von allen Leerzeichen am Anfang und Ende befreien
+    return rtrn.strip()
