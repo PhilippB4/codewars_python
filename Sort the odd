@@ -1,0 +1,17 @@
+def sort_array(source_array):
+    # Nur die geraden Werte als sortierte Liste speichern
+    odds = sorted([x for x in source_array if x%2!=0])
+    
+    # Durch die ursprüngliche Liste gehen und eine neue Liste erstellen
+    # Wenn die Zahl ungerade ist kann diese übernommen werden
+    # Wenn die Zahl gerade ist, muss der erste Eintrag aus der sortierten Liste genommen
+    # und dieser dann aus der sortierten Liste entfernt werden
+    new_array = []
+    for x in source_array:
+        if x % 2 == 0:
+            new_array.append(x)
+        else:
+            new_array.append(odds[0])
+            del odds[0]
+            
+    return new_array
