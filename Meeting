@@ -1,0 +1,21 @@
+def meeting(s):
+    # s aufteilen am Semikolon
+    splitted = s.split(';')
+    rtrn = []
+    
+    # Durch die Liste splitted gehen
+    for x in splitted:
+        # Jedes Element darin nochmal aufteilen (diesmal am Doppelpunkt)
+        tmp = x.split(':')
+        # Vor- und Nachname tauschen, groß schreiben und der rtrn Liste hinzufügen
+        rtrn.append((tmp[1].upper(), tmp[0].upper()))
+    
+    # die rtrn Liste sortieren
+    rtrn = sorted(rtrn, key=lambda x: (x[0], x[1]))
+    rtrn_str = ''
+    
+    # den rtrn_str schreiben und alles richtig formatieren
+    for x in rtrn:
+        rtrn_str += f'({x[0]}, {x[1]})'
+        
+    return rtrn_str
