@@ -1,0 +1,15 @@
+def all_continents(lst): 
+    # Alle Kontinente in eine Liste schreiben
+    continents = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
+    
+    # Durch die Dictionaries in der Input-Liste gehen
+    for dict in lst:
+        # Wenn ein Kontinent vertreten ist, lösche diesen aus der continents-Liste
+        if dict['continent'] in continents:
+            del continents[continents.index(dict['continent'])]
+            
+    # Wenn die Liste noch befüllt ist, gib False zurück, ansonsten gib True zurück
+    if continents:
+        return False
+    else:
+        return True
