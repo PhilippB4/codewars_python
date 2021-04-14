@@ -1,4 +1,5 @@
 def last_digit(n1, n2):
     # Aufgrund der größe mancher Zahlen wird die eingebaute Funktion pow verwendet
     # pow(Basiswert, Exponent, Modulowert(optional))
+    # Wer mehr über die pow()-Funktion wissen will: https://stackoverflow.com/questions/5246856/how-did-python-implement-the-built-in-function-pow
     return pow(n1, n2, 10)
